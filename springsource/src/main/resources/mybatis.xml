@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias type="com.zack.test.domain.TestDO" alias="TestDO"/>
+    </typeAliases>
+    <mappers>
+    	<mapper resource="sql/test.xml"/>
+    </mappers>
+</configuration>

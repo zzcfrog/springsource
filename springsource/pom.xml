@@ -7,30 +7,134 @@
   <description>springsource</description>
   <properties>
 		<!-- 主要依赖库的版本定义 -->
-		<spring.version>4.1.1.RELEASE</spring.version>
+		<org.springframework.version>4.2.5.RELEASE</org.springframework.version>
   </properties>
-  <dependencies>
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-context</artifactId>
-        <version>${spring.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-web</artifactId>
-        <version>${spring.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-webmvc</artifactId>
-        <version>${spring.version}</version>
-    </dependency>
-    <!-- 
-    <dependency>
-	<groupId>org.apache.activemq</groupId>
-	<artifactId>activemq-core</artifactId>
-	<version>5.7.0</version>
+    <dependencies>
+  	<!-- spring component starts -->
+  	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<version>${org.springframework.version}</version>
 	</dependency>
-    -->
-</dependencies>
+  	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+  	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+  	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+  	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-jdbc</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+  	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-aop</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+	<dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>${org.springframework.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context-support</artifactId>
+        <version>${org.springframework.version}</version>
+    </dependency>
+    <!-- spring component ends -->
+    
+    <!-- mybatis component starts -->
+    <dependency>
+		<groupId>org.mybatis</groupId>
+		<artifactId>mybatis-spring</artifactId>
+		<version>1.2.2</version>
+	</dependency>
+	<dependency>
+	<groupId>org.mybatis</groupId>
+		<artifactId>mybatis</artifactId>
+		<version>3.2.8</version>
+	</dependency>
+	<dependency>
+		<groupId>org.mybatis.generator</groupId>
+		<artifactId>mybatis-generator-core</artifactId>
+		<version>1.3.2</version>
+	</dependency>
+    <!-- mybatis component ends -->
+    
+    <!-- velocity component starts -->
+    <dependency>
+    	<groupId>org.apache.velocity</groupId>
+		<artifactId>velocity</artifactId>
+		<version>1.6.4</version>
+    </dependency>
+    <!-- velocity component ends -->
+    
+    
+  	<!-- slf4j log4j component starts-->
+  	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-log4j12</artifactId>
+		<version>1.7.12</version>
+	</dependency> 
+  	<!-- slf4j log4j component ends -->
+  	
+  	<!-- junit component starts-->
+  	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>4.12</version>
+	</dependency>
+  	<!-- junit component ends -->
+  	<dependency>  
+        <groupId>com.fasterxml.jackson.core</groupId>  
+        <artifactId>jackson-core</artifactId>  
+        <version>2.1.0</version>  
+    </dependency>
+    <dependency>  
+        <groupId>com.fasterxml.jackson.core</groupId>  
+        <artifactId>jackson-databind</artifactId>  
+        <version>2.1.0</version>  
+    </dependency>  
+    <dependency>  
+        <groupId>com.fasterxml.jackson.core</groupId>  
+        <artifactId>jackson-annotations</artifactId>  
+        <version>2.1.0</version>  
+    </dependency>
+    <dependency>
+	  <groupId>commons-dbcp</groupId>
+	  <artifactId>commons-dbcp</artifactId>
+	  <version>1.4</version>
+	</dependency>
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.18</version>
+	</dependency>
+  	
+  </dependencies>  
+  <build>
+    <finalName>jetty-plugin</finalName>
+    <plugins>
+      <!-- Maven Jetty Plugin -->
+      <plugin>
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>maven-jetty-plugin</artifactId>
+        <version>6.1.10</version>
+        <configuration>
+          <!-- 每2秒的间隔扫描一次,实现热部署 -->
+          <scanIntervalSeconds>2</scanIntervalSeconds>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
