@@ -9,7 +9,7 @@
   	-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:spring-beans.xml</param-value>
+        <param-value>classpath:spring-beans.xml,classpath:spring-amq.xml</param-value>
     </context-param>
  
     <!-- 字符集 过滤器  -->

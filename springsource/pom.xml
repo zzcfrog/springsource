@@ -51,6 +51,11 @@
         <artifactId>spring-context-support</artifactId>
         <version>${org.springframework.version}</version>
     </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jms</artifactId>
+        <version>${org.springframework.version}</version>
+    </dependency>
     <!-- spring component ends -->
     
     <!-- mybatis component starts -->
@@ -79,8 +84,7 @@
     </dependency>
     <!-- velocity component ends -->
     
-    
-  	<!-- slf4j log4j component starts-->
+    <!-- slf4j log4j component starts-->
   	<dependency>
 		<groupId>org.slf4j</groupId>
 		<artifactId>slf4j-log4j12</artifactId>
@@ -88,6 +92,14 @@
 	</dependency> 
   	<!-- slf4j log4j component ends -->
   	
+  	<!-- Active MQ starts-->
+    <dependency>
+        <groupId>org.apache.activemq</groupId>
+        <artifactId>activemq-all</artifactId>
+        <version>5.13.3</version>
+    </dependency>
+    <!-- Active MQ ends -->
+    
   	<!-- junit component starts-->
   	<dependency>
 		<groupId>junit</groupId>
